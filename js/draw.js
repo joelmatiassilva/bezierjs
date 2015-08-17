@@ -1,8 +1,9 @@
 function bindDrawFunctions(idx) {
+  console.log("bindDrawFunctions");
 
   var figure = find("figure")[idx];
   var cvs = document.createElement("canvas");
-  cvs.width = 200;
+  cvs.width = 500;
   cvs.height = 200;
   var ctx = cvs.getContext("2d");
   figure.appendChild(cvs);
@@ -123,6 +124,7 @@ function bindDrawFunctions(idx) {
     },
 
     drawCircle: function(p, r, offset) {
+      console.log(p);
       offset = offset || { x:0, y:0 };
       var ox = offset.x;
       var oy = offset.y;

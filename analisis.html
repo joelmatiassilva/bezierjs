@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bezier.js, for doing Bezier curve things</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Bezier.js, for doing Bezier curve things</h1>
+    </header>
+
+    <main>
+
+      <section id="getLUT">
+        <h1>.getLUT(steps)</h1>
+
+        <figures>
+          <figure class="quadratic"><script type="text/beziercode">
+            new Bezier(10,40 , 100,420 , 200,40);
+            var draw = function() {
+              //drawSkeleton(curve); //dibuja los puntos para mover
+              var LUT = curve.getLUT(4);
+              LUT.forEach(function(p) { drawCircle(p,20); });
+            }
+          </script></figure>
+        </section>
+
+    </main>
+
+
+    <script src="lib/bezier.js"></script>
+    <script src="js/draw.js"></script>
+    <script src="js/interaction.js"></script>
+    <script src="js/loader.js"></script>
+  </body>
+</html>
